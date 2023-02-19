@@ -1,0 +1,78 @@
+﻿@model FYPSystem.Models.Evaluation
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutSupervior.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h1 class="display-3" style="color:forestgreen"><b>Edit</b></h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">
+                        <label asp-for="StudentName" class="control-label"></label>
+                        <input readonly asp-for="StudentName" class="form-control" />
+                        <span asp-validation-for="StudentName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="RollNum" class="control-label"></label>
+                        <input readonly asp-for="RollNum" class="form-control" />
+                        <span asp-validation-for="RollNum" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ProposalMarks" class="control-label"></label>
+                        <input readonly asp-for="ProposalMarks" class="form-control" />
+                        <span asp-validation-for="ProposalMarks" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PosterMarks" class="control-label"></label>
+                        <input readonly asp-for="PosterMarks" class="form-control" />
+                        <span asp-validation-for="PosterMarks" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SupervisorMarks" class="control-label"></label>
+                        <input asp-for="SupervisorMarks" class="form-control" />
+                        <span asp-validation-for="SupervisorMarks" class="text-danger"></span>
+                    </div>
+                    @*<div class="form-group">
+                        <label asp-for="ExaminerOne" class="control-label"></label>
+                        <input readonly asp-for="ExaminerOne" class="form-control" />
+                        <span asp-validation-for="ExaminerOne" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ExaminerTwo" class="control-label"></label>
+                        <input readonly asp-for="ExaminerTwo" class="form-control" />
+                        <span asp-validation-for="ExaminerTwo" class="text-danger"></span>
+                    </div>*@
+                    <div class="form-group">
+                        <label asp-for="TotalMarks" class="control-label"></label>
+                        <input readonly asp-for="TotalMarks" class="form-control" />
+                        <span asp-validation-for="TotalMarks" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" hidden>
+                        <label asp-for="StudentId" class="control-label"></label>
+                        <select asp-for="StudentId" class="form-control" asp-items="ViewBag.StudentId"></select>
+                        <span asp-validation-for="StudentId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-success" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+        </div>
+
+    </div>
+</div>
+
+
+

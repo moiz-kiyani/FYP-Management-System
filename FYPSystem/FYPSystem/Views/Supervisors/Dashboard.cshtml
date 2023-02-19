@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_LayoutSupervior.cshtml";
+}
+
+<div class="row gutters-sm">
+   
+   <div class="container" style="margin-top:30px; margin-left:40px;">
+      <div class="col-md-6 mt-3 ">
+        <div class="card mb-3 ">
+            <div class="card-body">
+                <h1 class="display-3" style="color:#858796"><b>Profile</b></h1>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Full Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        @ViewBag.user.SupervisorName
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        @ViewBag.user.AppUsers.Email
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-2">Contact No</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        @ViewBag.user.ContactNo
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Shift</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        @ViewBag.user.Shift
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                <div class="col-sm-3">
+                        <h6 class="mb-0">Qualification</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                @ViewBag.user.Qualification
+                </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Faculty</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        @ViewBag.user.SupervisorFacultyType
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-2">Domain</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        @ViewBag.user.Domain
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        </div>
+
+
+    </div>
+</div>

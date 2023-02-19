@@ -1,0 +1,102 @@
+﻿@model FYPSystem.Models.Evaluation
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutSupervior.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h1 class="display-3" style="color:forestgreen"><b>Details</b></h1>
+
+        <div>
+
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.StudentName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.StudentName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RollNum)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.RollNum)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.SupervisorName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.SupervisorName)
+                </dd>
+                @*<dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.SupervisorEmail)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.SupervisorEmail)
+                </dd>*@
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ProposalMarks)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ProposalMarks)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PosterMarks)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PosterMarks)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.SupervisorMarks)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.SupervisorMarks)
+                </dd>
+                @*<dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ExaminerOne)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ExaminerOne)
+                </dd>*@
+                @*<dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ExaminerTwo)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ExaminerTwo)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.EvaluatorOneName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.EvaluatorOneName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.EvaluatorTwoName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.EvaluatorTwoName)*@
+
+                <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.TotalMarks)
+                </dt>
+                <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.TotalMarks)
+                </dd>
+                <dt class="col-sm-2" hidden>
+                        @Html.DisplayNameFor(model => model.Student)
+                </dt>
+                <dd class="col-sm-10" hidden>
+                        @Html.DisplayFor(model => model.Student.Id)
+                </dd>
+            </dl>
+        </div>
+        <div>
+
+            <a asp-action="Index" class="btn btn-outline-success">Back to List</a>
+        </div>
+    </div>
+</div>

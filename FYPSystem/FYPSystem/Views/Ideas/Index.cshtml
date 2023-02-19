@@ -1,0 +1,80 @@
+﻿@model IEnumerable<FYPSystem.Models.Ideas>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutSupervior.cshtml";
+}
+
+<div class="container" style="margin-top:30px; margin-left:40px;">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="display-3" style="color:#858796"><b>My Ideas</b></h1>
+            <p>
+                <a asp-action="Create" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Create New</a>
+            </p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Approved)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignedStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupervisorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupervisorShift)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+           @* <th>
+                @Html.DisplayNameFor(model => model.supervisor)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Approved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssignedStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupervisorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupervisorShift)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+           @* <td>
+                @Html.DisplayFor(modelItem => item.supervisor.Id)
+            </td>*@
+            <td>
+                                <a asp-action="Edit" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" asp-route-id="@item.Id">Edit</a>
+                                <a asp-action="Details" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" asp-route-id="@item.Id">Details</a>
+                                <a asp-action="Delete" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
